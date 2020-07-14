@@ -70,8 +70,7 @@ def setarmedstate(arm = 1,away = 0):
         """
     armed[0] = arm
     armed[1] = away
-    sender_email = "naishadhpatel.allworld@gmail.com"
-    receiver_email = "aquasimba@live.com"
+ 
     
 
     
