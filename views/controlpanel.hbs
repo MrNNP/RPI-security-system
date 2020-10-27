@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <h4>Security System</h4>
+        <ul>
+            <li><a href="/">Home</a></li>
+            {{#if userin}}
+            <li><a href="/controlpanel">Control Panel</a></li>
+            <li><a href="/logout">Log Out</a></li>
+            {{else}}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+          {{/if}}
+          </ul>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="jumbotron">
+        <h1 align-items='center' class="display-4">Control Panel</h1>
+        <p class="lead">Hello, {{name}}</p>
+        <hr class="my-4">
+    <nav>
+        <form method="POST" action="/auth/armdisarm">
+        <input type="hidden" value="Arm" name="Armtext" id="Armtext">
+        <button value="arm" type="submit" class="btn btn-danger btn-lg"{{#if cantArm}}disabled{{/if}} name:'Arm' id='Arm'>Arm</button>
+          </form>
+          
+      <h4>Press to Arm or Disarm</h4>
+
+
+ <form method="POST" action="/auth/armdisarm">
+        <input type="hidden" value="disarm" name="disArmtext" id="disArmtext">
+        <button type="disarm" class="btn btn-warning btn-lg"{{#if canArm}}disabled{{/if}} name:'Disarm' id="Disarm" >Disarm</button>
+          </form>
+          
+    </nav>
+    <nav>
+        <div {{#if zone1}} class='squarered' {{else}} class="squaregreen"{{/if}}><h4>Zone 1</h4></div>
+        <div{{#if zone2}} class='squarered' {{else}} class="squaregreen"{{/if}}><h4>Zone 2</h4></div>
+        <div {{#if zone3}} class='squarered' {{else}} class="squaregreen"{{/if}}><h4>Zone 3</h4></div>
+        <div {{#if zone4}} class='squarered' {{else}} class="squaregreen"{{/if}}><h4>Zone 4</h4></div>
+        <div {{#if zone5}} class='squarered' {{else}} class="squaregreen"{{/if}}><h4>Zone 5</h4></div>
+    </nav>
+    </div></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+</body>
+</html>
