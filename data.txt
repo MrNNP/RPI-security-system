@@ -1,8 +1,0 @@
-1
-Zone 0 is 0
-Zone 1 is 0
-Zone 2 is 0
-Zone 3 is 0
-Zone 4 is 0 
-Zone 5 is 0
-Zone 6 is 0

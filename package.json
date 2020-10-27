@@ -1,24 +1,23 @@
 {
-  "name": "rpi-security-system",
+  "name": "website-branch",
   "version": "1.0.0",
-  "description": "A security system that will take GPIO inputs and notify the user of any activity.",
+  "description": "",
   "main": "index.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "socket.io": "^2.3.0"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MrNNP/RPI-security-system.git"
-  },
-  "author": "MrNNP",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MrNNP/RPI-security-system/issues"
-  },
-  "homepage": "https://github.com/MrNNP/RPI-security-system#readme"
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "msql": "^1.0.3",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.4"
+  }
 }
